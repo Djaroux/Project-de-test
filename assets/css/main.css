@@ -1,0 +1,268 @@
+/**
+ * Additional styles for Basic Elementor Theme
+ * This file contains additional styles beyond the main style.css
+ */
+
+/* Screen reader text */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+/* Skip link */
+.skip-link {
+    background-color: #f1f1f1;
+    color: #21759b;
+    padding: 1rem;
+}
+
+/* Search form */
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 400px;
+}
+
+.search-form label {
+    flex: 1;
+}
+
+.search-field {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-submit {
+    padding: 0.5rem 1rem;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-submit:hover {
+    background-color: #005177;
+}
+
+/* Read more link */
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0073aa;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #005177;
+    color: #fff;
+}
+
+/* Post navigation */
+.post-navigation {
+    margin: 3rem 0;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.post-navigation .nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+    flex: 1;
+}
+
+.post-navigation .nav-subtitle {
+    display: block;
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.post-navigation .nav-title {
+    display: block;
+    font-weight: 600;
+}
+
+/* Page header */
+.page-header {
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.page-title {
+    margin-bottom: 0.5rem;
+}
+
+.archive-description {
+    color: #666;
+    font-size: 0.9375rem;
+}
+
+/* Author info */
+.author-info {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.author-avatar img {
+    border-radius: 50%;
+}
+
+.author-description h2 {
+    margin-top: 0;
+}
+
+/* No results */
+.no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+/* Alignments */
+.alignleft {
+    float: left;
+    margin: 0.5rem 1.5rem 1rem 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Page links */
+.page-links {
+    clear: both;
+    margin: 2rem 0;
+}
+
+.page-links a,
+.page-links > span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.page-links .page-number {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+/* Sticky post */
+.sticky {
+    position: relative;
+}
+
+.sticky::before {
+    content: "📌";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-item {
+    margin: 0;
+}
+
+.gallery-caption {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Accessibility improvements */
+:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+a:focus,
+button:focus {
+    outline: 2px solid #0073aa;
+}
+
+/* Print styles */
+@media print {
+    .site-header,
+    .site-footer,
+    .sidebar,
+    .menu-toggle,
+    .comments-area,
+    .edit-link {
+        display: none;
+    }
+
+    .site-content {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+    }
+}
